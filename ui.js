@@ -1,6 +1,7 @@
 class UI{
     constructor(){
         this.profile = document.getElementById('profile');
+        this.repo = document.getElementById('repo');
     }
 
     showProfile(user){
@@ -37,10 +38,36 @@ class UI{
 
     }; 
 
-    showRepo(data) {
-        console.log(data);
+    showRepo(repos){
+        let ou = "";
+        for(let i = 0; i < repos.length; i++){
+            ou += `
+            <div class = "allrepo">
+                <div class = "one">
+                    <div class="reponame">
+                        Repository: ${repos[i].full_name}
+                    </div>
+                </div>
 
-    }    
+                
+                <div class = "two>
+                    <div class="repourl">
+                        URL: ${repos[i].url}
+                    </div>
+                    <div class="repoforks">
+                        Forks: ${repos[i].forks}
+                    </div>
+                    <div class="repostars">
+                        Stars: ${repos[i].stargazers_count}
+                    </div>
+                </div>
+            </div>
 
+            `;
+            this.repo.innerHTML = ou;
+        }
+    }
+
+  
   
 }
