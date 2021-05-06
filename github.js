@@ -15,7 +15,6 @@ class GitHub{
         const repoList = await repoResponse.json();
 
         return profileName;
-        return repoList;
 
     }
 
