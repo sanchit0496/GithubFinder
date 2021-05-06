@@ -27,13 +27,12 @@ function getUser(e) {
                 document.getElementById('repo').innerHTML = "No Repositories!";
             }else{
                 ui.showRepo(data);
-                console.log(data);
             }
         })
 
 
     }else{
-        document.getElementById('message').innerHTML = "Enter Username!";
+
     }
 
 
